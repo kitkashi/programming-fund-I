@@ -14,7 +14,7 @@ int main()
     cout<< "What is your dogs name? ";
     getline(cin,dogName);
     int dogYears= age *7;//make sure to put calculations after input
-    cout << dogName << ", you are " << dogYears << ", years old!";
+    cout << dogName << ", you are " << dogYears << " years old!";
     return 0;
 
 }
