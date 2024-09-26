@@ -1,0 +1,40 @@
+You silly imbicile, you have no idea the horrors upon which you've just released.
+
+In 3 days, your dearly beloved, brownie bean, shall change into a monsterous pencil!!!
+And mom will see this and develop a strong fear of pee!!!  
+
+Beware!!!!!!!!!
+
+//A silly mad lib
+//Kit Edwards
+//it is 9/26/2024
+#include <iostream> 
+#include <string>
+using namespace std;
+
+int main()
+{
+    int number;
+    string pet, object, name, horrid;
+
+    cout << "Enter a whole number \n";
+    cin >> number;
+    cin.ignore();//skips the \n in the buffer when you put a number in
+   
+    cout<< "Enter a beloved family pet \n";
+    getline(cin,pet);
+
+    cout << "Enter the nearest object to your left \n";
+    getline(cin,object);
+
+    cout << "Enter someone from your past \n";
+    getline(cin,name);
+
+    cout << "Enter something truly terrible \n";
+    getline (cin,horrid);
+
+    cout << "\n\nYou silly imbicile, you have no idea the horrors upon which you've just released. \n \n";
+    cout << "In " << number << " days, your dearly beloved, " << pet << ",  shall change into a monsterous " << object << "!!! \n";
+    cout << "And " << name << " will see this and develop a strong fear of " << horrid << "!!! \n\n";
+    cout << "Beware!!!!!!!!!";
+}
