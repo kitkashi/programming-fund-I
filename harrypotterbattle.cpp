@@ -11,7 +11,10 @@ int main()
     //user choice 
     int choice; 
     //harrys health
-    int harryHealth=101; //so the health is 
+    int harryHealth=101; //if the health is not initialized it is stored as a negative number
+    //it must be stored >100 so that way it does not prock the user win or lose
+    //the variable is overwritten in the switch statement when going through them
+    
     //damage done by creatures
     const int PIXIE=20,
     GNOME=40,BASIL=80, DRAGON=100;
@@ -21,9 +24,7 @@ int main()
     cin >> health;
 
     //checks to see that the users input is valid
-        if (health<=100&&health>0)
-    cout<< "thank you for putting in the correct input \n";
-    else if(!(health<=100&&health>0))
+    if(!(health<=100&&health>0))
     {
         cout<< "Please go back and put a number 1-100\n";
         return 0;
