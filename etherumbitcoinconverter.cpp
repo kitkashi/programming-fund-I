@@ -15,8 +15,10 @@ int main()
     cout<< "Please enter a dollar amount to convert into Bitcoin and Ethereum:\n";
     cin>> dollars;
 
-    cout<< "\nUsing the conversion rates of 1.8e-05 Bitcoin per dollar and 0.00044 Ethereum per dollar: \n \n";
-    cout<< fixed << setprecision(3);
+    cout<<setprecision(3);//makes the total numbers shown be 3 sigfigs 
+    cout<< "\nUsing the conversion rates of "<< BTC_PER_DOLLAR <<" Bitcoin per dollar and ";
+    cout<< ETH_PER_DOLLAR << " Ethereum per dollar: \n \n";
+    cout<< fixed << setprecision(3);//fixed makes the decimal always after the first one
     cout << dollars << " dollars = " << dollars * BTC_PER_DOLLAR << " Bitcoin.\n";
     cout << dollars << " dollars = "<< dollars * ETH_PER_DOLLAR << " Ethereum.\n";
     return 0;
