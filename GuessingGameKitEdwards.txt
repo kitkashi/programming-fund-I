@@ -1,0 +1,78 @@
+What is the highest you'd like the range of numbers to go? 3
+Please guess a number 1-3: 2
+You have guessed correctly, great job!
+It took you 1 tries to get the correct answer!
+Would you like to play again?(y/n)
+y
+What is the highest you'd like the range of numbers to go? 3
+Please guess a number 1-3: 2
+That guess is a bit too low try again!
+3
+You have guessed correctly, great job!
+It took you 2 tries to get the correct answer!
+Would you like to play again?(y/n)
+n
+
+What is the highest you'd like the range of numbers to go? 3
+Please guess a number 1-3: 2
+That guess is too high, lets be a little less ambitous
+1
+You have guessed correctly, great job!
+It took you 2 tries to get the correct answer!
+Would you like to play again?(y/n)
+n
+
+
+//Guessing game computer chooses a number [1,whatever the user wants] and user must guess includes upper guessing limit, tracking tries, and ability to play again
+//By Kit Edwards
+//10/19/24
+#include <iostream>
+#include <cstdlib>//rand and srand
+#include <ctime>//time
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));//this seeds the generator with a large value from time
+    //this way the program does not print out the same rand # and it is dynamic
+    int guess, counter=0;//counts the amount of times the user has guessed
+    char confirm;//for the end of the program stores y/n do you want to play again?
+    do
+    {
+    int counter=1;//resets the counter to one including the guess at the start
+    //lets user set the range
+    int limit;//utilizes 
+    cout<< "What is the highest you'd like the range of numbers to go? ";
+    cin>> limit;
+    cout<< "Please guess a number 1-"<<limit<<": ";
+    cin>> guess;
+    int value=rand()%limit+1;
+    
+    while (guess!=value)//this loop lets them guess if the number is too high or low
+    {
+        if (guess>value)
+        {
+            cout<< "That guess is too high, lets be a little less ambitous\n";
+            cin>> guess;
+            counter++;
+            
+        }
+        else if (guess<value)
+        {
+            cout<< "That guess is a bit too low try again!\n";
+            cin>> guess;
+            counter++;
+        }
+
+    }
+
+    cout<< "You have guessed correctly, great job!\n";
+    cout<< "It took you "<<counter<< " tries to get the correct answer!\n";
+    cout<< "Would you like to play again?(y/n)\n";
+    cin.ignore();
+    cin.get(confirm);
+    }
+    while(confirm=='y');
+return 0;
+}
