@@ -3,10 +3,13 @@ using namespace std;
 
 int main()
 {
-    int num;
-    for (int num =2;num <=100;num+=2)
+    for(int row=1;row<=5;row++)
     {
-        cout<< num << " " << endl;
+        cout<< row;
+        
+        for(int col=1;col<=5;col++)
+        {
+            cout<< col;
+        }
     }
-    return 0;
 }
